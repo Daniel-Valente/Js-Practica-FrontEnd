@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/pokeball.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <center>
+                        <h3><label id="pokedex">POKEDEX</label></h3>
+                        <br>
+                        <div class="circle">
+                            <img src="./img/logo pokedex.png" alt="Pokemon" id="pokeImg" width="150px" class="img" >
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <div class="searchBox">
+                        <input class="searchInput" type="text" id="pokeName" name="pokeName" placeholder="Search">
+                        <button class="searchButton" onclick="fetchPokemon();" id="btnSearch">
+                            <i class="material-icons">
+                                search
+                            </i>
+                        </button>
+                    </div>
+                </div>
+                <div style="position:absolute; align-items: flex-start; margin-top: 25px;">    
+                    <div >
+                        <button  onclick="modalPanelAux();" class="bubbly-button" id="pokeInfo" disabled>VER INFORMACION</button>
+                    </div>
+                    <center>
+                        <div>
+                            <button  onclick="cleanPokeInput();" class="bubbly-button" id="pokeClean" disabled>LIMPIAR</button>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <button class="close" onclick="closeModalPanel();"><img src="./img/cancel.png" width="15px"></button>
+            <div data-poke-types class="pokeTypes">
+            </div>
+            <div data-poke-stats class="pokeStats">
+            </div>
+            <center> 
+                <div data-poke-moves class="pokeMoves">
+                </div>
+            </center>
+        </div>
+      
+      </div>
+</body>
+<footer>
+    <script src="./pokedex.js"></script>
+</footer>
+</html>
