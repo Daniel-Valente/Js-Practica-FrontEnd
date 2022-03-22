@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container .card {
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face {
+    width: 350px;
+    height: 250px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(150px);
+}
+
+
+
+.container .card:hover .face.face1 {
+    background: #ff0057;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content {
+    opacity: 0.2;
+    background-color: #333;
+    width: 340px;
+    height: 215px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.circle > .img {
+     width: 100%;
+     height: 100%;
+     border-radius: 100%;
+}
+
+.container .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+button  {
+    position: relative;
+    text-decoration: none;
+    border: none;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+button:hover {
+    background: #ff0043;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff0043,
+                0 0 25px #ff0043,
+                0 0 50px #ff0043,
+                0 0 100px #ff0043;
+}
+
+button:disabled {
+    background: #000;
+    opacity: 0.5;
+    box-shadow: #000;
+}
+
+.bubbly-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 25px;
+    appearance: none;
+    background-color: #00b436;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in0.25s;
+    box-shadow: 0 2px 25px rgba(0, 255, 64, 0.5);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+  
+.close {
+    background-color: #fff;
+    float: right;
+    top: -45px;
+    padding: 10px;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pokeTypes div {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    border-radius: 4px;
+    align-content: center;
+    border: 1px dashed #000;
+}
+
+.pokeStats div {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.pokeMoves div {
+    justify-content: center;
+    display: inline-flex;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    align-content: center;
+    font-weight: bold;
+}
+
+:root{
+    --primaryColor: #2A3640;
+    --secondaryColor: #FFFFFF;
+    --txtColor: #2F3640;
+  }
+  
+.searchBox {
+    margin-top: -100px;
+    display: flex;
+    background: var(--txtColor);
+    height: 40px;
+    border-radius: 40px;
+}
+  
+.searchBox:hover{
+    box-shadow: 0px 0px 6px var(--primaryColor);
+}
+  
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 10px;
+}
+  
+.searchBox .searchButton {
+    color: var(--secondaryColor);
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
+    border-radius: 50%;
+    background: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+  
+.searchBox .searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
