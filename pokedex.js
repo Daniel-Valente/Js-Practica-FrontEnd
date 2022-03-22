@@ -28,19 +28,17 @@ const fetchPokemon = () => {
             let pokeID = data.id;
             let pokeNameApi = data.name;
             const { moves, stats, types } = data;
-            console.log(data)
-            console.log(types)
-            console.log(moves)
+            
             pokeImage(pokeImg);
-            console.log(pokeImg);
-
             PokeTypes(types);
             PokeStats(stats);
             PokeMoves(moves, types);
+            changeColor(data.types[0].type.name);
+
             pokeInfo.disabled = false; 
+
             document.getElementById("pokedex").innerHTML = "#" + pokeID + " " + pokeNameApi.toUpperCase();
             document.getElementById("pokeName").value = "";
-            changeColor(data.types[0].type.name);
         }
     });
 }
