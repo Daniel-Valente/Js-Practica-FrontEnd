@@ -63,14 +63,6 @@ const cleanPokeInput = () => {
 }
 
 const modalPanel = () => {
-    let pokeName  = document.getElementById("pokeName").value;
-    if (pokeName != "") {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "block";
-    }
-}
-
-const modalPanelAux = () => {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
 }
