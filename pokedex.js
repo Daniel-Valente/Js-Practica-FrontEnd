@@ -32,7 +32,7 @@ const fetchPokemon = () => {
             pokeImage(pokeImg);
             PokeTypes(types);
             PokeStats(stats);
-            PokeMoves(moves, types);
+            PokeMoves(moves);
             changeColor(data.types[0].type.name);
 
             pokeInfo.disabled = false; 
